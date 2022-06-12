@@ -41,14 +41,14 @@ product_repository.save(product_5)
 product_6 = Product("Pork Crunch", "40g snack bag", supplier_2, 10, 1, 2)
 product_repository.save(product_6)
 
-product_7 = Product("Blue Cow Energy Drink", "125ml single can", supplier_3, 3, 1, 3)
+product_7 = Product("Blue Cow Energy Drink", "125ml single can", supplier_3, 15, 1, 3)
 product_repository.save(product_7)
 
-product_8 = Product("A Blue Udder", "4 x 125ml Blue Cow Energy Drink multipack", supplier_3, 1, 2, 6)
+product_8 = Product("A Blue Udder", "4 x 125ml Blue Cow Energy Drink multipack", supplier_3, 10, 2, 6)
 product_repository.save(product_8)
 
 product_9 = Product("Flying Cow Energy Drink: ENERGY FREE, ZERO PURPOSE ALTERNATIVE!", "125ml single can", supplier_3, 2, 1, 3)
 product_repository.save(product_9)
 
-product_10 = Product("CHALK: The original chalk beverage", "1l share bottle", supplier_3, 10, 2, 4)
+product_10 = Product("CHALK: The original chalk beverage", "2l large bottle", supplier_3, 0, 2, 4)
 product_repository.save(product_10)
