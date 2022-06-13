@@ -1,10 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
 
-
-
-show targeted individual products here
-
-
+  <p>{{product.name}}</p>
+    <hr>
+    <p>{{product.description}}</p>
+    <p>Supplied by {{product.supplier.sup_name()}}</p>
+    <p>Stock: {{product.quantity}} pcs</p>
+    <p>£ {{product.buy_price}}</p>
+    <p>£ {{product.sell_price}}</p>
+    <p><a href="/products/{{product.id}}/edit">Edit</a></p>
+  </div>
 
 {% endblock %}

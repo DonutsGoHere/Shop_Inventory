@@ -6,10 +6,8 @@ import repositories.product_repository as product_repository
 import repositories.supplier_repository as supplier_repository
 
 
-
 product_repository.delete_all()
 supplier_repository.delete_all()
-
 
 
 supplier_1 = Supplier("Madbury\'s Chocolate")
@@ -50,5 +48,7 @@ product_repository.save(product_8)
 product_9 = Product("Flying Cow Energy Drink: ENERGY FREE, ZERO PURPOSE ALTERNATIVE!", "125ml single can", supplier_3, 2, 1, 3)
 product_repository.save(product_9)
 
-product_10 = Product("CHALK: The original chalk beverage", "2l large bottle", supplier_3, 0, 2, 4)
+product_10 = Product("CHALK: The original Devon chalk beverage", "2l large bottle", supplier_3, 0, 2, 4)
 product_repository.save(product_10)
+
+pdb.set_trace()

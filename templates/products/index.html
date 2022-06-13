@@ -2,9 +2,20 @@
 {% block content %}
 
 
-
-make page show all products listed from table 
-
-
+{% for product in all_products %}
+  <div class="product">
+    <div class="content">
+      <a href="/products/{{product.id}}">{{product.name}}</a>
+      <div class="name">
+        {{product.description}}
+        <br>
+        {{product.quantity}} pcs
+        <br>
+        {{product.supplier.sup_name()}}
+      </div>
+      <div>
+        <br>
+      </div>
+{% endfor %}
 
 {% endblock %}

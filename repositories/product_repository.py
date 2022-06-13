@@ -1,6 +1,6 @@
 from db.run_sql import run_sql
 from models.product import Product
-from models.supplier import Supplier
+
 import repositories.supplier_repository as supplier_repository
 
 def save(product):
@@ -18,7 +18,7 @@ def select_all():
 
   for res in results:
     supplier = supplier_repository.select(res['supplier_id'])
-    product = Product(res['name'], res['description'], res['quantity'], res['buy_price'], res['sell_price'], supplier)
+    product = Product(res['name'], res['description'], supplier, res['quantity'], res['buy_price'], res['sell_price'])
     products.append(product)
   return products
 
@@ -30,7 +30,7 @@ def select(id):
 
   if result is not None:
     supplier = supplier_repository.select(result['supplier_id'])
-    product = Product(result['name'], result['description'], result['quantity'], result['buy_price'], result['sell_price'], supplier)
+    product = Product(result['name'], result['description'], supplier, result['quantity'], result['buy_price'], result['sell_price'] )
   return product
 
 def update(product):

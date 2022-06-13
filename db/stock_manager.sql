@@ -1,14 +1,14 @@
-DROP TABLE IF EXISTS products
-DROP TABLE IF EXISTS suppliers
+DROP TABLE IF EXISTS products;
+DROP TABLE IF EXISTS suppliers;
 
 CREATE TABLE suppliers (
   id SERIAL PRIMARY KEY,
-  name VARCHAR(255),
+  name VARCHAR(255)
 );
 
 CREATE TABLE products (
   id SERIAL PRIMARY KEY,
-  name VARCHAR(255)
+  name VARCHAR(255),
   description VARCHAR(255),
   quantity INT,
   buy_price INT,
