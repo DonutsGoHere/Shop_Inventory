@@ -13,7 +13,7 @@ supplier_repository.delete_all()
 supplier_1 = Supplier("Madbury\'s Chocolate")
 supplier_repository.save(supplier_1)
 
-supplier_2 = Supplier("Porky Joe\'s Pork stuff")
+supplier_2 = Supplier("Porky Pete\'s Pork stuff")
 supplier_repository.save(supplier_2)
 
 supplier_3 = Supplier("Danger Dave\'s Distribution")
@@ -42,10 +42,10 @@ product_repository.save(product_6)
 product_7 = Product("Blue Cow Energy Drink", "125ml single can", supplier_3, 15, 1, 3)
 product_repository.save(product_7)
 
-product_8 = Product("A Blue Udder", "4 x 125ml Blue Cow Energy Drink multipack", supplier_3, 10, 2, 6)
+product_8 = Product("Blue Cow: An Udder", "4 x 125ml Blue Cow Energy Drink multipack", supplier_3, 10, 2, 6)
 product_repository.save(product_8)
 
-product_9 = Product("Flying Cow Energy Drink: ENERGY FREE, ZERO PURPOSE ALTERNATIVE!", "125ml single can", supplier_3, 2, 1, 3)
+product_9 = Product("Flying Blue Cow Energy Drink: ENERGY FREE, ZERO PURPOSE ALTERNATIVE!", "125ml single can", supplier_3, 2, 1, 3)
 product_repository.save(product_9)
 
 product_10 = Product("CHALK: The original Devon chalk beverage", "2l large bottle", supplier_3, 0, 2, 4)

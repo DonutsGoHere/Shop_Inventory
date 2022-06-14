@@ -1,10 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
+<h2>Suppliers - New</h2>
 
+<form action="/suppliers" method="post">
 
+  <div>
+    <label for="name">Supplier Name</label>
+    <input type="text" id="name" name="name" placeholder="Supplier Name" required autofocus>
+  </div>
 
-add form to make new supplier
-
+</form>
 
 
 {% endblock %}

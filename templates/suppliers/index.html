@@ -1,10 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
+<h2>Suppliers List</h2>
 
-
-
-page shows all suppliers
-
+{% for supplier in all_suppliers %}
+  <div class="supplier">
+      <div class="content">
+        <a href="/supplier/{supplier.id}}">{supplier.name}}</a>
+        <div class="edit">
+          <a href="/suppliers/{{supplier.id}}/edit">Edit Supplier **MANAGER USE ONLY**</a>
+        </div>
+        <div>
+          <br>
+        </div>
 
 
 {% endblock %}

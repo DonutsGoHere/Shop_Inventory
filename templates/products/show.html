@@ -1,14 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
+<h2>Product Information</h2>
 
   <p>{{product.name}}</p>
     <hr>
     <p>{{product.description}}</p>
     <p>Supplied by {{product.supplier.sup_name()}}</p>
-    <p>Stock: {{product.quantity}} pcs</p>
-    <p>£ {{product.buy_price}}</p>
-    <p>£ {{product.sell_price}}</p>
-    <p><a href="/products/{{product.id}}/edit">Edit</a></p>
+    <p>Stock: {{product.quantity}} pcs {{product.stock_indicator()}} </p>
+    <p>COST: £ {{product.buy_price}}</p>
+    <p>RRP: £ {{product.sell_price}}</p>
+    <p>Nutritional info:</p>
+    <p>Allergens:</p>
+    <p><a href="/products/{{product.id}}/edit">Edit Product **MANAGER USE ONLY**</a></p>
   </div>
 
 {% endblock %}

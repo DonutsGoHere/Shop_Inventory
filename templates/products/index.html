@@ -1,21 +1,23 @@
 {% extends "base.html" %}
 {% block content %}
-
+<h2>Current Inventory in Stock</h2>
 
 {% for product in all_products %}
-  <div class="product">
-    <div class="content">
-      <a href="/products/{{product.id}}">{{product.name}}</a>
-      <div class="name">
-        {{product.description}}
-        <br>
-        {{product.quantity}} pcs {{product.stock_indicator()}}
-        <br>
-        {{product.supplier.sup_name()}}
-      </div>
-      <div>
-        <br>
-      </div>
+  {% if product.quantity > 0 %}
+    <div class="product">
+      <div class="content">
+        <a href="/products/{{product.id}}">{{product.name}}</a>
+        <div class="name">
+          {{product.description}}
+          <br>
+          {{product.quantity}} pcs {{product.stock_indicator()}}
+          <br>
+          {{product.supplier.sup_name()}}
+        </div>
+        <div>
+          <br>
+        </div>
+  {% endif %}
 {% endfor %}
 
 {% endblock %}
