@@ -5,13 +5,14 @@
   <p>{{product.name}}</p>
     <hr>
     <p>{{product.description}}</p>
+    <p>Category: {{product.category}}</p>
     <p>Supplied by {{product.supplier.sup_name()}}</p>
-    <p>Stock: {{product.quantity}} pcs {{product.stock_indicator()}} </p>
+    <span><p>Stock: {{product.quantity}} pcs</p> <p><b>{{product.stock_indicator()}}</b></p></span>
     <p>COST: £ {{product.buy_price}}</p>
     <p>RRP: £ {{product.sell_price}}</p>
     <p>Nutritional info:</p>
     <p>Allergens:</p>
-    <p><a href="/products/{{product.id}}/edit">Edit Product **MANAGER USE ONLY**</a></p>
+    <p><a href="/products/{{product.id}}/edit">Edit Product</a></p>
   </div>
 
 {% endblock %}

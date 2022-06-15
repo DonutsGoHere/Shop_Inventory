@@ -1,17 +1,29 @@
 {% extends "base.html" %}
 {% block content %}
 <h2>Suppliers List</h2>
-
+<h3>
+<a href="/suppliers/new">New Supplier</a>
+</h3>
+<hr>
 {% for supplier in all_suppliers %}
   <div class="supplier">
       <div class="content">
-        <a href="/supplier/{supplier.id}}">{supplier.name}}</a>
+        <h3>{{supplier.name}}</h3>
+        </div>
+        <br>
         <div class="edit">
-          <a href="/suppliers/{{supplier.id}}/edit">Edit Supplier **MANAGER USE ONLY**</a>
+          <a href="/suppliers/{{supplier.id}}/edit">Edit Supplier</a>
         </div>
-        <div>
-          <br>
-        </div>
-
+  </div>
+  <div>
+    <br>
+  </div>
+  <div>
+    <br>
+  </div>
+  <div>
+    <br>
+  </div>
+{% endfor %}
 
 {% endblock %}

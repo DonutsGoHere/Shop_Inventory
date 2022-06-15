@@ -48,11 +48,10 @@ def edit_supplier(id):
 
 # UPDATE
 # PUT '/suppliers/<id>'
-@suppliers_blueprint.route("/suppliers", methods=['POST'])
+@suppliers_blueprint.route("/suppliers/<id>", methods=['POST'])
 def update_supplier(id):
   name = request.form['name']
   supplier = Supplier(name, id)
-  print(supplier.supplier.name())
   supplier_repository.update(supplier)
   return redirect('/suppliers')
 

@@ -1,5 +1,30 @@
 {% extends "base.html" %}
 {% block content %}
 <h2>Stock Room Dashboard</h2>
+{% for product in all_products %}
+  {% if product.quantity > 0 %}
+    <div class="product">
+      <div class="content">
+        <a href="/products/{{product.id}}">{{product.name}}</a>
+        <div class="name">
+          DESC: {{product.description}}
+          <br>
+          QTY: {{product.quantity}} pcs {{product.stock_indicator()}}
+          <br>
+          SUP: {{product.supplier.sup_name()}}
+          <br>
+          RRP: {{product.sell_price}}
+          <br>
+          COST: {{product.buy_price}}
+          <br>
+          CAT: {{product.category}}
+          <br>
+          PROF: {{product.calculate_mark_up()}}
+        </div>
+        <div>
+          <br>
+        </div>
+  {% endif %}
+{% endfor %}
 <p>Try use space for product and supplier buttons to respective indices welcome and top 3 lowest stock items</p>
 {% endblock %}

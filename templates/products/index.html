@@ -1,18 +1,29 @@
 {% extends "base.html" %}
 {% block content %}
 <h2>Current Inventory in Stock</h2>
-
+<h3>
+<a href="/products/new">New Product</a>
+</h3>
+<hr>
 {% for product in all_products %}
   {% if product.quantity > 0 %}
     <div class="product">
       <div class="content">
-        <a href="/products/{{product.id}}">{{product.name}}</a>
+        <b><a href="/products/{{product.id}}">{{product.name}}</a></b>
         <div class="name">
-          {{product.description}}
+          DESC: {{product.description}}
           <br>
-          {{product.quantity}} pcs {{product.stock_indicator()}}
+          QTY: {{product.quantity}} pcs <b><u>{{product.stock_indicator()}}</u></b>
           <br>
-          {{product.supplier.sup_name()}}
+          SUP: {{product.supplier.sup_name()}}
+          <br>
+          RRP: £{{product.sell_price}}
+          <br>
+          COST: £{{product.buy_price}}
+          <br>
+          CAT: {{product.category}}
+          <br>
+          MKUP: £{{product.calculate_mark_up()}}
         </div>
         <div>
           <br>
