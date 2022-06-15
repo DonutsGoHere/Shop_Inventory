@@ -9,9 +9,6 @@ class Product():
     self.category = category
     self.id = id
 
-  def calculate_mark_up(self):
-    mark_up = (self.sell_price) - (self.buy_price)
-    return mark_up
 
   def stock_indicator(self):
     if self.quantity == 0:
@@ -20,3 +17,7 @@ class Product():
       return "low stock"
     elif self.quantity >= 10:
       return ""
+
+  def calculate_mark_up(self):
+    mark_up = (self.sell_price) - (self.buy_price)
+    return mark_up
