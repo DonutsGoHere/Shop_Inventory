@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 <h2>Stock Room Dashboard</h2>
+<h3>Low and Out of Stock</h3>
 {% for product in all_products %}
   {% if product.quantity < 10 %}
     <div class="product">
