@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 <h2>Product Information</h2>
-
-  <p>{{product.name}}</p>
+<hr>
+  <h3>{{product.name}}</h3>
     <hr>
     <p>{{product.description}}</p>
     <p>Category: {{product.category}}</p>
@@ -12,5 +12,5 @@
     <p>RRP: £ {{product.sell_price}}</p>
     <p><a href="/products/{{product.id}}/edit">Edit Product</a></p>
   </div>
-
+<hr>
 {% endblock %}
