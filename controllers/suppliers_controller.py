@@ -13,7 +13,8 @@ suppliers_blueprint = Blueprint("suppliers", __name__)
 @suppliers_blueprint.route("/suppliers")
 def suppliers():
   suppliers = supplier_repository.select_all()
-  return render_template("suppliers/index.html", all_suppliers = suppliers)
+  products = product_repository.select_all()
+  return render_template("suppliers/index.html", all_suppliers = suppliers, all_products = products)
 
 # NEW
 # GET '/suppliers/new'
@@ -43,7 +44,8 @@ def show_supplier(id):
 @suppliers_blueprint.route("/suppliers/<id>/edit", methods=['GET'])
 def edit_supplier(id):
   supplier = supplier_repository.select(id)
-  return render_template('/suppliers/edit.html', supplier = supplier)
+  products = product_repository.select_all()
+  return render_template('suppliers/edit.html', supplier = supplier, all_products = products)
 
 # UPDATE
 # PUT '/suppliers/<id>'

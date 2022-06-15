@@ -3,5 +3,3 @@ class Supplier:
     self.name = name
     self.id = id
 
-  def sup_name(self):
-    return f"{self.name}"

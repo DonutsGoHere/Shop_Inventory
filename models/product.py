@@ -14,9 +14,9 @@ class Product():
     return mark_up
 
   def stock_indicator(self):
-    if self.quantity >= 10:
-      return ""
+    if self.quantity == 0:
+      return "** out of stock! **"
     if self.quantity < 10:
       return "low stock"
-    elif self.quantity == 0:
-      return "out of stock"
+    elif self.quantity >= 10:
+      return ""
