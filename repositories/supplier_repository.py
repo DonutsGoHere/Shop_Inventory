@@ -32,7 +32,7 @@ def select(id):
   return supplier
 
 def update(supplier):
-  sql = "UPDATE suppliers SET (name) = (%s) WHERE id = %s"
+  sql = "UPDATE suppliers SET name = %s WHERE id = %s"
   values = [supplier.name, supplier.id]
   run_sql(sql, values)
 

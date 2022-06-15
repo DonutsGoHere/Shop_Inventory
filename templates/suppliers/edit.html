@@ -2,13 +2,13 @@
 {% block content %}
 <h2>Suppliers - Edit</h2>
 
-<form action="/suppliers/{{supplier.id}}" method="post">
+<form action="/suppliers/{{supplier.id}}" method="POST">
   <div>
     <label for="name">Supplier Name</label>
   </div>
   <div>
-     <br>
-   </div>
+    <br>
+  </div>
   <div>
     <input type="text" name="name" id="name" value="{{supplier.name}}" required>
   </div>
