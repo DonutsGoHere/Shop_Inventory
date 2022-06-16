@@ -3,7 +3,8 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   color: whitesmoke;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+   'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   padding: 10px;
   margin: 10px;
   }
