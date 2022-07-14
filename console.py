@@ -48,7 +48,7 @@ product_repository.save(product_8)
 product_9 = Product("Flying Blue Cow Energy Drink: ENERGY FREE, ZERO PURPOSE ALTERNATIVE!", "125ml single can", supplier_3, 2, 1, 3, "drinks")
 product_repository.save(product_9)
 
-product_10 = Product("CHALK: The original Devon chalk beverage", "2l large bottle", supplier_3, 0, 2, 4, "drinks")
+product_10 = Product("CHALK: The original Chalk beverage", "2l large bottle", supplier_3, 0, 2, 4, "drinks")
 product_repository.save(product_10)
 
 pdb.set_trace()

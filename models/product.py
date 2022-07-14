@@ -9,6 +9,13 @@ class Product():
     self.category = category
     self.id = id
 
+# FUNCTION to ITERATE through product quantity
+#  IF number is EQUAL to 0 THEN
+#    DISPLAY "** out of stock! **"
+#  IF number is LESS than 0 THEN
+#    DISPLAY "low stock"
+#  ELSE IF number is EQUAL to OR GREATER than 10 THEN
+#    DISPLAY "empty string"
 
   def stock_indicator(self):
     if self.quantity == 0:
@@ -17,6 +24,9 @@ class Product():
       return "low stock"
     elif self.quantity >= 10:
       return ""
+
+
+
 
   def calculate_mark_up(self):
     mark_up = (self.sell_price) - (self.buy_price)
